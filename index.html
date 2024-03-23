@@ -23,7 +23,7 @@
             <header class="text-white">
                 <div class="container max-w-screen-xl mx-auto p-4">
                     <div class="inner-header-wrapper">
-                        <div class="header-logo-wrapper max-w-xs">
+                        <div class="header-logo-wrapper">
                             <img src="./images/website-logo-white.png" width="100%"/>
                         </div>
                         <div class="navbar">
@@ -38,9 +38,24 @@
                                 <li><a>CONTACT US</a></li>
                             </ul>
                         </div>
-                        <div class="sidebar">
+                        <div class="sidebar-btn">
                             <i class="fa-solid fa-bars"></i>
                         </div>
+                    </div>
+                </div>
+                <div class="sidebar hide">
+                    <div class="inner-sidebar">
+                        <div class="sidebar-close">
+                            <i class="fa-solid fa-xmark"></i>
+                        </div>
+                        <ul class="sidebar-nav text-xl">
+                            <li class="sidebar-nav-item">
+                                <a>Home</a>
+                            </li>
+                            <li class="sidebar-nav-item">
+                                <a>Contact Us</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </header>
@@ -57,13 +72,28 @@
                         <i class="fas fa-search text-white cursor-pointer"></i>
                         <input class="search-input" type="text" placeholder="Search by Address or Area" />
                     </div>
-                    <div class="flex justify-between items-center gap-2 cursor-pointer">
+                    <div class="modal-btn flex justify-between items-center gap-2 cursor-pointer">
                         <span class="md-none font-semibold text-white">BOOK AN APPOINTMENT</span>
                         <i class="fa-solid fa-arrow-right text-white"></i>
                     </div>
                 </div>
             </div>
         </section>
+        
+        <div class="show-onscroll hidden">
+            <div class="search bg-theme">
+                <div class="search-bar container max-w-screen-xl mx-auto p-4">
+                    <div class="si-wrapper flex items-center gap-2">
+                        <i class="fas fa-search text-white cursor-pointer"></i>
+                        <input class="search-input" type="text" placeholder="Search by Address or Area" />
+                    </div>
+                    <div class="modal-btn flex justify-between items-center gap-2 cursor-pointer">
+                        <span class="md-none font-semibold text-white">BOOK AN APPOINTMENT</span>
+                        <i class="fa-solid fa-arrow-right text-white"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
         <section class="relative section-res-padding">
             <div class="container max-w-screen-xl mx-auto">
                 <div class="marketing-wrapper">
@@ -166,28 +196,28 @@
                     </div>
                     <div class="steps-item text-center text-white">
                         <h1>2</h1>
-                        <p>INITIAL CONSULTATION & PLANNING</p>
+                        <p>DEVISE & EXECUTE MARKETING PLAN</p>
                     </div>
                     <div class="steps-item-arrow text-center text-white">
                         <i class="fa-solid fa-angle-right text-4xl"></i>
                     </div>
                     <div class="steps-item text-center text-white">
                         <h1>3</h1>
-                        <p>INITIAL CONSULTATION & PLANNING</p>
+                        <p>REVIEW OFFERS & REACH AGREEMENT WITH BUYER</p>
                     </div>
                     <div class="steps-item-arrow text-center text-white">
                         <i class="fa-solid fa-angle-right text-4xl"></i>
                     </div>
                     <div class="steps-item text-center text-white">
                         <h1>4</h1>
-                        <p>INITIAL CONSULTATION & PLANNING</p>
+                        <p>COMPLETE TRANSACTION PROCESS</p>
                     </div>
                     <div class="steps-item-arrow text-center text-white">
                         <i class="fa-solid fa-angle-right text-4xl"></i>
                     </div>
                     <div class="steps-item text-center text-white">
                         <h1>5</h1>
-                        <p>INITIAL CONSULTATION & PLANNING</p>
+                        <p>AFTER - SALE SERVICE</p>
                     </div>
                 </div>
             </div>
@@ -235,27 +265,30 @@
         </section>
         <section class="selling-process section-res-padding">
             <div class="container max-w-screen-xl mx-auto p-4">
-                <h2 class="text-center text-white mb-8">The Selling Process</h2>
+                <h2 class="text-center text-white mb-8">The Buying Process</h2>
                 <div class="steps-wrapper pt-4 pb-8">
-                    <div class="steps-item text-center text-white">
+                    <div class="steps-item-2 text-center text-white">
                         <h1>1</h1>
                         <p>INITIAL CONSULTATION & PLANNING</p>
                     </div>
                     <div class="steps-item-arrow text-center text-white">
                         <i class="fa-solid fa-angle-right text-4xl"></i>
                     </div>
-                    <div class="steps-item text-center text-white">
+                    <div class="steps-item-2 text-center text-white">
                         <h1>2</h1>
                         <p>SEARCH FOR A HOME & GET PRE-APPROVED</p>
                     </div>
                     <div class="steps-item-arrow text-center text-white">
                         <i class="fa-solid fa-angle-right text-4xl"></i>
                     </div>
-                    <div class="steps-item text-center text-white">
+                    <div class="steps-item-2 text-center text-white">
                         <h1>3</h1>
                         <p>SUBMIT AN OFFER</p>
                     </div>
-                    <div class="steps-item text-center text-white">
+                    <div class="steps-item-arrow text-center text-white">
+                        <i class="fa-solid fa-angle-right text-4xl"></i>
+                    </div>
+                    <div class="steps-item-2 text-center text-white">
                         <h1>4</h1>
                         <p>COMPLETE SETTLEMENT PROCESS</p>
                     </div>
@@ -283,7 +316,7 @@
                 </div>
             </div>
         </section>
-        <div class="py-12">
+        <div class="py-12 p-4">
             <img class="max-w-lg mx-auto" src="./images/other-companies.jpg" width="100%" />
         </div>
         <section class="we-market section-res-padding">
@@ -366,6 +399,53 @@
                 <button class="theme-button">CONTACT US</button>
             </div>
         </section>
+        
+        <!-- Main modal -->
+        <div class="modal hidden">
+            <div class="relative">
+                <div class="modal-close">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <div class="flex max-w-4xl mx-auto">
+                    <div class="bg-black mw-item p-12">
+                        <div class="text-white text-center  ">
+                            <i class="fa-solid fa-tty text-2xl"></i>
+                            <p class="py-6"><a href="mailto:luxuryhomesinwc@icloud.com" class="">luxuryhomesinwc@icloud.com</a></p>
+                            <i class="fa-solid fa-map-location-dot text-2xl"></i>
+                            <p class="py-6">4337 Chabot Drive, Pleasanton, CA 94588Julie Hansen-Orvis | CA DRE# 00934447</p>
+                        </div>
+                    </div>
+                    <div class="bg-white message-container mw-item p-12 text-lg">
+                        <h3 class="mb-6 text-center">Submit A Message</h3>
+                        <form class="form-content" data-type="contact-form">
+                            <input type="text" placeholder="Name" name="name" class="st-input" value="">
+                            <input type="text" placeholder="Phone" name="phoneNumber" class="st-input" value="">
+                            <input type="text" placeholder="Email" name="email" class="st-input" value="">
+                            <input type="text" placeholder="Message" name="message" class="st-input" value="">
+                            <div class="lp-disclaimer">
+                                <label class="lp-tcr-content">
+                                    <span class="lp-tcr-checkbox">
+                                        <input type="checkbox" name="termsAccepted" required="">
+                                    </span>
+                                    <span class="text-sm">
+                                        By providing Julie Hansen Partnership
+                                        your contact information, you acknowledge and agree to our
+                                        <a href="/terms-and-conditions" target="_blank">Privacy Policy</a> and consent to receiving marketing communications,
+                                        including through automated calls, texts, and emails, some of which may use artificial or prerecorded voices.
+                                        This consent isn’t necessary for purchasing any products or services and you may opt out at any time.
+                                        To opt out from texts, you can reply, ‘stop’ at any time. To opt out from emails, you can click on the unsubscribe
+                                        link in the emails. Message and data rates may apply.
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="form-button">Send</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
         <footer class="section-res-padding">
             <div class="container max-w-screen-xl mx-auto p-4">
                 <div class="top-footer">
