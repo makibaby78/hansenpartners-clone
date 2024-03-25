@@ -54,11 +54,14 @@ window.addEventListener('scroll', ()=>{
 
 // modal
 
-const modalbtn = document.querySelector('.modal-btn');
+const modalbtn = document.querySelectorAll('.modal-btn');
 const modalclose = document.querySelector('.modal-close');
 const modal = document.querySelector('.modal')
 
-modalbtn.addEventListener('click', modalactivation);
+for(let x=0;x<modalbtn.length;x++){
+    modalbtn[x].addEventListener('click', modalactivation);
+}
+
 modalclose.addEventListener('click', modalactivation);
 
 function modalactivation(){
